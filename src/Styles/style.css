@@ -1,0 +1,274 @@
+:root{
+  --letter-shadow: #c3c3c3
+}
+@font-face {
+  font-family: 'valorantFont';
+  src: url('../Components/fonts/ValorantFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    min-width: 0;
+    font: inherit;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  img,
+  video,
+  svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100dvh;
+   
+  }
+  
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  
+  /* styles */
+
+  body{
+    background-color:#EFD5F2;
+  }
+
+  .container-main{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  h6{
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'valorantFont',sans-serif;
+    font-weight: 600;
+    color:#ff989e;
+    text-shadow:1px 1px 2px #fe3334;
+    margin-bottom: 0rem;
+    font-size: 1.8rem;
+  }
+  .container-letter{
+    position: relative;
+    animation: up 3s linear infinite;
+  }
+
+  .cover{
+    position: absolute;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-top: 100px solid #404040;
+    border-bottom: 100px solid transparent;
+    transform-origin: top;
+    transition: transform 1s ease;
+  }
+  .letter{
+    border-left: 200px solid #C7ADD9;
+    border-right: 200px solid #C7ADD9;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid #D5B5E6;
+  }
+  .paper{
+    border-radius: 4px;
+    font-family: 'Brush Script MT',cursive;
+    line-height: 1rem;
+    font-size: 14px;
+    position: absolute;
+    background-color:#eab7b7;
+    padding: 1rem;
+    width: 400px;
+    z-index: -1;
+    height: 200px;
+    transition: all 2s ease;
+    box-shadow: 100px rgba(0,0,0,0,0.4);
+  }
+  .options{
+    display: flex;
+    gap: 5rem;
+  }
+
+  button{
+    border-radius: 3px;
+    color: #404040;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #EFD5F2;
+    padding: 0.5rem 1rem;
+    border: 1px solid #404040;
+    transition: background-color 1s ease;
+  }
+  button:hover{
+    background-color: #D5B5E6;
+    color: #F2F2F2;
+  }
+
+  .open-cover{
+    transform: rotatex(180deg);
+  }
+  .open-paper{
+    animation: fadeUp .5s forwards;
+  }
+  .close-paper{
+    animation: fadeDown .5s forwards;
+  }
+  .sombra{
+    background-color: #404040;
+    width: 200px;
+    height: 4px;
+    border-radius: 50%;
+    top:100%;
+    left: -4px;
+    background: var(--letter-shadow);
+    animation: shadow 3s linear infinite;
+    margin: 0 auto;
+  }
+  .heart{
+    display: none;
+    position: absolute;
+    top:25%;
+    left: 46%;
+    margin: auto;
+    font-size: 3rem;
+    animation: growHeart 4s forwards;
+  }
+  .cofeti{
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 20%;
+    margin: auto;
+    font-size: 4rem;
+    animation: growHeart 4s forwards;
+  }
+  .cofeti2{
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 80%;
+    margin: auto;
+    font-size: 4rem;
+    animation: growHeart 4s forwards;
+  }
+  .heart_small{
+    display: none;
+    position: absolute;
+    top:25%;
+    left: 23%;
+    margin: auto;
+    font-size: 3rem;
+    animation: growHeartSmall 4s forwards;
+  }
+  .img_kuro{
+    width: 7rem;
+    position: absolute;
+    top:1%;
+    left: 45%;
+   
+  }
+  @keyframes up {
+    0%,100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-15%);
+    }
+  }
+  @keyframes shadow { 
+    50% { 
+      opacity: .4;
+      transform: translateY(1px) scale(.8);
+    } 
+  }
+  @keyframes fadeUp{
+    0%{
+      top:0
+    }
+    100%{
+      top: -100px;
+    }
+  }
+  @keyframes fadeDown{
+    0%{
+      top:-100px
+    }
+    100%{
+      top: -0;
+    }
+  }
+
+  @keyframes growHeart{
+    0%{
+      scale: 1;
+      opacity:1 ;
+    }
+    100%{
+      opacity:0 ;
+      scale: 2.5;
+      transform: translateY(-85%)
+    }
+  }
+  @keyframes growHeartSmall{
+    0%{
+      scale: 1;
+      opacity:1 ;
+    }
+    100%{
+      opacity:0 ;
+      transform: translateY(-105%) 
+    }
+  }
+  @media screen and (max-width: 768px) {
+    h6{
+      font-size: 1.3rem;
+      margin-bottom: 4rem;
+    }
+    .cover{
+        position: absolute;
+        border-left: 140px solid transparent;
+        border-right: 140px solid transparent;
+        border-top: 70px solid 404040;
+        border-bottom: 70px solid transparent;
+      }
+      .letter{
+        border-left: 140px solid #C7ADD9;
+        border-right: 140px solid #C7ADD9;
+        border-top: 70px solid transparent;
+        border-bottom: 70px solid #D5B5E6;
+      }
+      .paper{
+        width: 280px;
+        height: 130px;
+      }
+      .open-paper{
+        top: -120px;
+        margin-top: 1rem;
+        height: 180px;
+      }
+      
+      .img_kuro{
+        width: 7rem;
+        position: absolute;
+        top:7%;
+        left: 37%;
+       
+      }
+
+  }
