@@ -244,7 +244,7 @@
         position: absolute;
         border-left: 140px solid transparent;
         border-right: 140px solid transparent;
-        border-top: 70px solid 404040;
+        border-top: 70px solid #404040;
         border-bottom: 70px solid transparent;
       }
       .letter{
