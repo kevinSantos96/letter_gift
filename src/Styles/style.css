@@ -48,7 +48,17 @@
   body{
     background-color:#EFD5F2;
   }
-
+  .content-gift{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/src/Components/resources/valorant.jpeg') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+    overflow-y: hidden;
+  }
   .container-main{
     display: flex;
     flex-direction: column;
@@ -56,6 +66,10 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+  }
+  h2{
+    font-family: 'valorantFont',sans-serif;
+    color: #FF4656;
   }
   h6{
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
@@ -65,6 +79,9 @@
     text-shadow:1px 1px 2px #fe3334;
     margin-bottom: 0rem;
     font-size: 1.8rem;
+  }
+  span{ 
+    font-size: 10px;
   }
   .container-letter{
     position: relative;
@@ -88,7 +105,7 @@
   }
   .paper{
     border-radius: 4px;
-    font-family: 'Brush Script MT',cursive;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1rem;
     font-size: 14px;
     position: absolute;
@@ -235,6 +252,20 @@
       transform: translateY(-105%) 
     }
   }
+
+  .gift-card {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.serial-number {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
   @media screen and (max-width: 768px) {
     h6{
       font-size: 1.3rem;
@@ -269,6 +300,9 @@
         top:7%;
         left: 37%;
        
+      }
+      .gift-card {
+        width: 80%;
       }
 
   }

@@ -2,7 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import '../Styles/style.css'
 import image from '../Components/resources/kuromi.png'
-function CardView() {
+
+function CardView({goToGiftView}) {
   const [openLetter, setopenLetter] = useState(true)
   const [textButton, settextButton] = useState("Abrir")
 
@@ -53,9 +54,14 @@ function CardView() {
     if (openLetter){
       handleOpenButton();
       settextButton("Cerrar")
+     
     }else{
       handleCloseButton(); 
       settextButton("Abrir")
+      setTimeout(() => {
+        goToGiftView()
+      }, 1500);
+      
     }
     setopenLetter(!openLetter); 
   }
@@ -79,7 +85,6 @@ function CardView() {
             Hoy es tu día especial espero que la pases bien ya que eres increíble y mereces lo mejor.
             Te deseo que cumplas cada una de tus metas.
             Felicidades Anny te aprecio mucho!.
-
             </div>
             <div className='letter'></div>
         </div>
