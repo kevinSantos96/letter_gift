@@ -82,7 +82,7 @@ function CardView({goToGiftView}) {
             <span className='heart_small'>❤️</span>
             <span className='heart'>❤️</span>
             <div className='paper'>
-            Hoy es tu día especial espero que la pases bien ya que eres increíble y mereces lo mejor.
+            Hoy es tu día especial espero que la pases bien ya que eres increíble y mereces todo lo mejor del mundo.
             Te deseo que cumplas cada una de tus metas.
             Felicidades Anny te aprecio mucho!.
             </div>

@@ -7,6 +7,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'cursiva-paper';
+  src: url('../Components/fonts/SimpleMandala.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
     min-width: 0;
@@ -105,9 +111,9 @@
   }
   .paper{
     border-radius: 4px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'cursiva-paper',sans-serif;
     line-height: 1rem;
-    font-size: 14px;
+    font-size: 16px;
     position: absolute;
     background-color:#eab7b7;
     padding: 1rem;

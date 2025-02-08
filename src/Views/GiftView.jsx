@@ -6,8 +6,8 @@ export const GiftView = () => {
     <div className="content-gift">
       <div className="gift-card">
         <h2>FELICIDADES POR TU CUMPLEÑOS TE LO MERECES!</h2>
-        <p class="serial-number">XXXX-YYYY-ZZZ</p>
-        <span>(talvez mejoras pinche manca 🫠)</span>
+        <p class="serial-number">RA-FK6UHPQ9VCUWSUMA</p>
+        <span>(mi regalo de cumpleaños 🎁)</span>
       </div>
     </div>
   );
